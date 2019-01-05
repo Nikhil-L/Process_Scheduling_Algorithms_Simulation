@@ -1,0 +1,5 @@
+First_Come_First_Serve
+Shortest_Job_Next
+Round_Robin_Scheduling
+Multilevel_Queue
+Priority_Scheduling
