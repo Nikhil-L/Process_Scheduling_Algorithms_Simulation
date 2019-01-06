@@ -379,18 +379,6 @@ void avaragetime_rr(struct process_details process[], int n, int *averagewaittim
 	cout << "The average turnaround time is : " << *averageturnaroundtime << "\n\n";
 }
 
-void averagetime_multilevelqueue(struct process_details process[], int n, int *averagewaittime, int *averageturnaroundtime)
-{
-
-	cout << "MULTI LEVEL QUEUE SCHEDULING :\n\n";	
-
-	avaragetime_rr(process, n , averagewaittime, averageturnaroundtime);
-	avaragetime_fcfs(process, n, averagewaittime, averageturnaroundtime);
-	
-}
-
-
-
 void print_details(struct process_details process[], int n)
 {
 	int i;
@@ -471,11 +459,6 @@ int main()
 	cout << "Press any key to continue : ";
 	cin >> ch;
 	cout << "\n\n";
-	averagetime_multilevelqueue(process, size, (averagewaittime + i), (averageturnaroundtime + i));
-	i++;
-	cout << "Press any key to continue : ";
-	cin >> ch;
-	cout << "\n\n";
 	avaragetime_priority(process, size, (averagewaittime + i), (averageturnaroundtime + i));
 	cout << "Press any key to continue : ";
 	cin >> ch;
@@ -483,9 +466,4 @@ int main()
 	compare(averagewaittime, averageturnaroundtime, algorithms, size);
 	return 0;
 }
-
-
-
-
-
 
